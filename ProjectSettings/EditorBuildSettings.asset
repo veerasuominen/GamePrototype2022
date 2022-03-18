@@ -12,9 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/EnemyRoom.unity
-    guid: 62ad3f67951540d4c9e7da877c2cfe32
-  - enabled: 1
     path: Assets/Scenes/NPC_Room.unity
     guid: be054a1ef6449e941a78b8793744fc38
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ec9c862176ea3d0439c88f57853dd193
+  - enabled: 1
+    path: Assets/Scenes/EnemyRoom/EasyRoom1.unity
+    guid: 62ad3f67951540d4c9e7da877c2cfe32
+  - enabled: 1
+    path: Assets/Scenes/EnemyRoom/EasyRoom2.unity
+    guid: fef1ae63b3ce8434bbebebf0bbcea794
+  - enabled: 1
+    path: Assets/Scenes/EnemyRoom/EasyRoom3.unity
+    guid: 01d69d67f3c8f5a4180ecffe876b8480
+  - enabled: 1
+    path: Assets/Scenes/ItemRoom/ItemRoom1.unity
+    guid: c1c4c065b6ba0d44a9aaa112e92b460f
+  - enabled: 1
+    path: Assets/Scenes/ItemRoom/ItemRoom2.unity
+    guid: c3f8e2db7e9b97a46a3300f7b6071633
+  - enabled: 1
+    path: Assets/Scenes/ItemRoom/ItemRoom3.unity
+    guid: 4f29cd0259c7977449273c567254f86f
   m_configObjects: {}

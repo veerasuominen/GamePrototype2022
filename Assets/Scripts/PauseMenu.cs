@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -47,6 +48,16 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         player.GetComponent<PlayerController>().enabled = true;
     }
- 
-    
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+
 }
