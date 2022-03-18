@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,7 +19,11 @@ public class StartRoomDoor : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        LoadRandomEasyRoom();
+        if (collision.gameObject.tag=="Player")
+        {
+            LoadRandomEasyRoom();
+            
+        }
     }
 
     void LoadRandomEasyRoom()
@@ -24,5 +31,30 @@ public class StartRoomDoor : MonoBehaviour
         int index = Random.Range(4,6);
         SceneManager.LoadScene(index);
     }
-    
+    public static T DeserializeData<T>(string path)
+    {
+        //this is the magic that deserializes the data so we can load it
+        T data = default(T);
+
+        if (File.Exists(path))
+        {
+            FileStream fs = new FileStream(path, FileMode.Open);
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                data = (T)formatter.Deserialize(fs);
+                Debug.Log("Data read from " + path);
+            }
+            catch (SerializationException e)
+            {
+                Debug.LogError(e.Message);
+            }
+            finally
+            {
+                fs.Close();
+            }
+        }
+        return data;
+    }
+
 }

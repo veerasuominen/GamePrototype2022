@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public float BulletSpeed = 20;
     public GameObject Bullet;
+    public GameObject Bullet2;
     Quaternion posUp = Quaternion.Euler(0, 0, 0);
     Quaternion posRight = Quaternion.Euler(0, 0, -90);
     Quaternion posDown = Quaternion.Euler(0, 0, -180);
@@ -23,23 +24,56 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Instantiate(Bullet, transform.position, Bullet.transform.rotation=posUp );
+            int bully = Random.Range(1, 3);
+            if (bully==1)
+            {
+                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posUp);
+            }
+            else
+            {
+                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posUp);
+            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            
-            Instantiate(Bullet, transform.position, Bullet.transform.rotation=posDown);
+
+            int bully = Random.Range(1, 3);
+            if (bully == 1)
+            {
+                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posDown);
+            }
+            else
+            {
+                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posDown);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Instantiate(Bullet, transform.position, Bullet.transform.rotation=posRight );
+            int bully = Random.Range(1, 3);
+            if (bully == 1)
+            {
+                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posRight);
+            }
+            else
+            {
+                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posRight);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Instantiate(Bullet, transform.position, Bullet.transform.rotation =posLeft);
+            int bully = Random.Range(1, 3);
+            if (bully == 1)
+            {
+                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posLeft);
+            }
+            else
+            {
+                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posLeft);
+            }
         }
     }
 }

@@ -7,7 +7,11 @@ public class EnemyRoomDoor : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        LoadRandomEasyRoom();
+        if (collision.gameObject.tag=="Player")
+        {
+            LoadRandomEasyRoom();
+        }
+        
     }
 
     void LoadRandomEasyRoom()
