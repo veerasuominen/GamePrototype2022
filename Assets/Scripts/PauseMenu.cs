@@ -56,7 +56,10 @@ public class PauseMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        IsClosed();
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+        player.GetComponent<PlayerController>().enabled = true;
     }
 
 
