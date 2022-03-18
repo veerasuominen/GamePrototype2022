@@ -16,7 +16,7 @@ public class EnemyRoomDoor : MonoBehaviour
 
     void LoadRandomEasyRoom()
     {
-        int index = Random.Range(7, 9);
+        int index = Random.Range(7, 10);
         SceneManager.LoadScene(index);
     }
 }

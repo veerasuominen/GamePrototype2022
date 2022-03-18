@@ -28,7 +28,7 @@ public class StartRoomDoor : MonoBehaviour
 
     void LoadRandomEasyRoom()
     {
-        int index = Random.Range(4,6);
+        int index = Random.Range(4,7);
         SceneManager.LoadScene(index);
     }
     public static T DeserializeData<T>(string path)
