@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Vector2 speed = new Vector2(5, 5);
-
+    public int health = 6;
+    public bool invincible;
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer Player;
 
@@ -29,8 +30,8 @@ public class PlayerController : MonoBehaviour
 
             transform.Translate(movement);
 
-            CharacterRotation(); 
-        
+            CharacterRotation();
+
 
     }
 
@@ -52,4 +53,5 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+    
 }

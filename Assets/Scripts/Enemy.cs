@@ -33,10 +33,18 @@ public class Enemy : MonoBehaviour
             health--;
             Destroy(collision.transform.gameObject);
         }
-        else if (collision.transform.name.Contains("Player"))
+        else if (collision.transform.name.Contains("Player")&& collision.transform.GetComponent<PlayerController>().invincible ==false)
         {
-            Destroy(collision.transform.gameObject);
+            collision.transform.GetComponent<PlayerController>().health--;
+            collision.transform.GetComponent<PlayerController>().invincible=true;
+            StartCoroutine(LoseInvincibility());
+
         }
-       
+        IEnumerator LoseInvincibility()
+        {
+            yield return new WaitForSeconds(2);
+            collision.transform.GetComponent<PlayerController>().invincible = false;
+        }
     }
+    
 }
