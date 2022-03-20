@@ -31,7 +31,10 @@ public class PlayerController : MonoBehaviour
             transform.Translate(movement);
 
             CharacterRotation();
-
+        if (health==0)
+        {
+            Destroy(gameObject);
+        }
 
     }
 
