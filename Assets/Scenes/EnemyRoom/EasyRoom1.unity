@@ -849,17 +849,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6137973494750957888, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8621967905838815847, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8621967905838815847, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.87
+      value: -5.24
       objectReference: {fileID: 0}
     - target: {fileID: 8621967905838815847, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.29
+      value: -3.13
       objectReference: {fileID: 0}
     - target: {fileID: 8621967905838815847, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_LocalPosition.z

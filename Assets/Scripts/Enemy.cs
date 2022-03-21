@@ -30,15 +30,22 @@ public class Enemy : MonoBehaviour
     {
         if (collision.transform.name.Contains("Pinecone"))
         {
-            health--;
-            Destroy(collision.transform.gameObject);
+            if (collision.contactCount==1)
+            {
+                health--;
+                Destroy(collision.transform.gameObject);
+            }
+            else
+            {
+                health--;
+                Destroy(collision.transform.gameObject);
+            }
         }
         else if (collision.transform.name.Contains("Player")&& collision.transform.GetComponent<PlayerController>().invincible ==false)
         {
             collision.transform.GetComponent<PlayerController>().health--;
             collision.transform.GetComponent<PlayerController>().invincible=true;
             StartCoroutine(LoseInvincibility());
-
         }
         IEnumerator LoseInvincibility()
         {

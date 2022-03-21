@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 5, y: 5}
+  health: 6
+  invincible: 0
 --- !u!114 &7433680157831649020
 MonoBehaviour:
   m_ObjectHideFlags: 0
