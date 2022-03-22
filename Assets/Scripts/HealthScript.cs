@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
@@ -44,6 +45,10 @@ public class HealthScript : MonoBehaviour
         if (Player.GetComponent<PlayerController>().health == 0)
         {
             image.sprite = sprites[0];
+            this.GetComponent<HealthScript>().enabled = false;
+
         }
-   }
+
+        
+    }
 }

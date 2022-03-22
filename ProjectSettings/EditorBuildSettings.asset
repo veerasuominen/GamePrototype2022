@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ItemRoom/ItemRoom3.unity
     guid: 4f29cd0259c7977449273c567254f86f
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: b7a39eb75f444d642bdc01084a8ce19b
   m_configObjects: {}

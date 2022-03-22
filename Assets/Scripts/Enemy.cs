@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -16,6 +17,15 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+        if (GameObject.Find("Player") == null)
+        {
+            StartCoroutine(Dead());
+        }
+        IEnumerator Dead()
+        {
+            yield return new WaitForSeconds(1.5f);
+            SceneManager.LoadScene(10);
         }
     }
     //private void OnTriggerEnter(Collider other)
@@ -46,6 +56,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(2);
             collision.transform.GetComponent<PlayerController>().invincible = false;
         }
+        
     }
     
 }
