@@ -19,6 +19,9 @@ public class Interact : MonoBehaviour
         {
             Debug.Log(gameObject.name);
             pickedup = true;
+            GameObject.Find("Player").GetComponent<PlayerController>().health++;
+            Destroy(gameObject);
+            
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

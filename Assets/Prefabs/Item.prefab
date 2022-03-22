@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsActiveNow: 0
   pickedup: 0
+  player: {fileID: 8500527428687120077, guid: 55da31b35e957804690a22b63e427357, type: 3}
 --- !u!50 &7436931343284795003
 Rigidbody2D:
   serializedVersion: 4
