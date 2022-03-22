@@ -22,7 +22,7 @@ public class StartRoomDoor : MonoBehaviour
         if (collision.gameObject.tag=="Player")
         {
             LoadRandomEasyRoom();
-            collision.transform.position = new Vector2(-0.2f, -4f);
+            collision.transform.position = new Vector2(-0.2f, -3f);
         }
     }
 

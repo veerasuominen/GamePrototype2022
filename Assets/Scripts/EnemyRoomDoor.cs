@@ -10,6 +10,7 @@ public class EnemyRoomDoor : MonoBehaviour
         if (collision.gameObject.tag=="Player")
         {
             LoadRandomEasyRoom();
+            collision.transform.position = new Vector2(7, 0);
         }
         
     }
