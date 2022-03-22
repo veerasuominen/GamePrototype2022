@@ -30,16 +30,10 @@ public class Enemy : MonoBehaviour
     {
         if (collision.transform.name.Contains("Pinecone"))
         {
-            if (collision.contactCount==1)
-            {
-                health--;
+            
+                health= health + collision.contactCount - collision.contactCount - 1;
                 Destroy(collision.transform.gameObject);
-            }
-            else
-            {
-                health--;
-                Destroy(collision.transform.gameObject);
-            }
+            
         }
         else if (collision.transform.name.Contains("Player")&& collision.transform.GetComponent<PlayerController>().invincible ==false)
         {

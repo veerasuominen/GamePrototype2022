@@ -45,5 +45,5 @@ public class HealthScript : MonoBehaviour
         {
             image.sprite = sprites[0];
         }
-    }
+   }
 }

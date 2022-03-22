@@ -26,8 +26,8 @@ public class PauseMenu : MonoBehaviour
         {
 
             IsClosed();
-        
         }
+        DontDestroyOnLoad(this);
     }
 
     void IsActive()
