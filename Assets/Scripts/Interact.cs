@@ -15,13 +15,12 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && IsActiveNow && !pickedup)
+        if (Input.GetKeyDown(KeyCode.E) && IsActiveNow && !pickedup&& GameObject.Find("Player").GetComponent<PlayerController>().health<6)
         {
             Debug.Log(gameObject.name);
             pickedup = true;
             GameObject.Find("Player").GetComponent<PlayerController>().health++;
-            Destroy(gameObject);
-            
+            Destroy(gameObject);          
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
