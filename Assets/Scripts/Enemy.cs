@@ -42,7 +42,6 @@ public class Enemy : MonoBehaviour
         {
             Destroy(collision.gameObject);
             health--;
-            
         }
         else if (collision.transform.name.Contains("Player")&& collision.transform.GetComponent<PlayerController>().invincible ==false)
         {

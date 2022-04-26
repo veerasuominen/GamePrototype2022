@@ -50,7 +50,7 @@ namespace CandiceAIforGames.AI
         /*
          * General Variables
          */
-        Collider col;
+        Collider2D col;
         [SerializeField]
         private int agentID;
         [SerializeField]
@@ -274,7 +274,7 @@ namespace CandiceAIforGames.AI
             {
                 CandiceAIManager.getInstance().RegisterAgent(gameObject, onRegistrationComplete);
             }
-            col = GetComponent<Collider>();
+            col = GetComponent<Collider2D>();
             //UnityEditor.Undo.RecordObject(this, "Description");
             combatModule = new CandiceModuleCombat(transform,onAttackComplete,"Agent" + AgentID + "-CandiceModuleCombat");
             movementModule = new CandiceModuleMovement("Agent" + AgentID + "-CandiceModuleMovement");

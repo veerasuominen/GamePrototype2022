@@ -342,7 +342,7 @@ Transform:
   m_Children:
   - {fileID: 1359986105}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &991737016
 GameObject:
@@ -444,6 +444,10 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6137973494750957888, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137973494750957888, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -453,11 +457,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8621967905838815847, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.24
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 8621967905838815847, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.13
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 8621967905838815847, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -491,6 +495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8862861502206019560, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 880b06fb22de8ee488da4f3717a6a6dd, type: 3}
 --- !u!1001 &5274647226096500132
@@ -502,7 +510,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5274647227021023530, guid: b337bb97b45f27f46a985bf08acb4d6c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5274647227021023530, guid: b337bb97b45f27f46a985bf08acb4d6c, type: 3}
       propertyPath: m_LocalPosition.x
