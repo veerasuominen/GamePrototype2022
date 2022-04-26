@@ -10,8 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4566572400503088281}
   - component: {fileID: 4566572400503088282}
-  - component: {fileID: 4566572400503088283}
   - component: {fileID: 4566572400503088284}
+  - component: {fileID: 4794384877433334418}
+  - component: {fileID: 2119110564}
+  - component: {fileID: 2119110565}
+  - component: {fileID: 2119110560}
+  - component: {fileID: 2119110561}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -28,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4566572400503088285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: -3.69, z: 0}
-  m_LocalScale: {x: 1.0935954, y: 1.0935954, z: 1.0935954}
+  m_LocalScale: {x: 1.2571642, y: 1.2571642, z: 1.2571642}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -48,21 +52,6 @@ MonoBehaviour:
   BulletSpeed: 20
   Bullet: {fileID: 2730765379813170484, guid: e1d8e9830d5183e4f88c540728b49c71, type: 3}
   Bullet2: {fileID: 2730765379813170484, guid: e1d8e9830d5183e4f88c540728b49c71, type: 3}
---- !u!114 &4566572400503088283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4566572400503088285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 455c7036c61845642b288568ba9ee1b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 5, y: 5}
-  health: 6
-  invincible: 0
 --- !u!212 &4566572400503088284
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -114,3 +103,99 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4794384877433334418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566572400503088285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed95467470ab8b4a84b0fe4cf31e31e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2119110564
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566572400503088285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0078551695, y: 0.30635065}
+  serializedVersion: 2
+  m_Radius: 0.78169984
+--- !u!61 &2119110565
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566572400503088285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.027298838, y: 0.10919505}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.22, y: 3.7}
+    newSize: {x: 3.22, y: 3.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.95419747, y: 2.007473}
+  m_EdgeRadius: 0
+--- !u!114 &2119110560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566572400503088285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &2119110561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4566572400503088285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c9647dc784a46bca664910f182491e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1

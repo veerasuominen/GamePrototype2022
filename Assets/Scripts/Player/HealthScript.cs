@@ -13,11 +13,13 @@ public class HealthScript : MonoBehaviour
     void Start()
     {
         image = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         if (Player.GetComponent<PlayerController>().health == 6)
         {
             image.sprite = sprites[6];
@@ -45,10 +47,14 @@ public class HealthScript : MonoBehaviour
         if (Player.GetComponent<PlayerController>().health == 0)
         {
             image.sprite = sprites[0];
-            this.GetComponent<HealthScript>().enabled = false;
+            StartCoroutine(Dead());
 
         }
 
-        
+        IEnumerator Dead()
+        {
+            yield return new WaitForSeconds(1.5f);
+            SceneManager.LoadScene(10);
+        }
     }
 }

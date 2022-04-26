@@ -18,10 +18,10 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (GameObject.Find("Player") == null)
-        {
-            StartCoroutine(Dead());
-        }
+        //if (GameObject.Find("Player") == null)
+        //{
+        //    StartCoroutine(Dead());
+        //}
         IEnumerator Dead()
         {
             yield return new WaitForSeconds(1.5f);
