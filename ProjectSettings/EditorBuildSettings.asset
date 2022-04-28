@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 21af4fa32d85a4c4cbd9e642785a1a2b
   - enabled: 1
-    path: Assets/Scenes/Start.unity
+    path: Assets/Scenes/StartMultiplayer.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/NPC_Room.unity
+    path: Assets/Scenes/NPCRoom.unity
     guid: be054a1ef6449e941a78b8793744fc38
   - enabled: 1
     path: Assets/Scenes/Credits.unity
@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Death.unity
     guid: b7a39eb75f444d642bdc01084a8ce19b
   - enabled: 1
-    path: Assets/Scenes/Player2.unity
-    guid: ff17c814c2573fc4d9391315b921f3d9
+    path: Assets/Scenes/StartSinglePlayer.unity
+    guid: 0f2996dafb6fede47a5b6c2372f8c69c
+  - enabled: 1
+    path: Assets/Scenes/EnemyRoom/EasyRoomCleared.unity
+    guid: f5f6e3a210626044b938ee34ad4b73c5
   m_configObjects: {}

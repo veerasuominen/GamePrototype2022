@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,12 +15,16 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    public void StartGame()
+    public void StartGameMultiPlayer()
     {
-        SceneManager.LoadScene("Start");
+        StartCoroutine(Startgame());
+    }
+    public void StartGameSinglePlayer()
+    {
+        SceneManager.LoadScene("StartSinglePlayer");
     }
 
     public void QuitGame()
@@ -30,5 +35,10 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
+    }
+    IEnumerator Startgame()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("StartMultiPlayer");
     }
 }
