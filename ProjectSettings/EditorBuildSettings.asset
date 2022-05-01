@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EnemyRoom/EasyRoomCleared.unity
     guid: f5f6e3a210626044b938ee34ad4b73c5
+  - enabled: 1
+    path: Assets/Scenes/EnemyRoom/HardRoom.unity
+    guid: a2bb05ff3a09982459f742666cfb3ff9
   m_configObjects: {}

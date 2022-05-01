@@ -7,7 +7,7 @@ public class DoorOpen : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
-
+    public bool isOpen=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,8 @@ public class DoorOpen : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Enemy")==null)
         {
             ChangeSprite();
+            gameObject.GetComponent<EnemyRoomDoor>().enabled = true;
+            isOpen = true;
         }
     }
 

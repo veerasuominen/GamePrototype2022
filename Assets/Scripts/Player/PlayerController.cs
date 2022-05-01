@@ -37,7 +37,10 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
-
+        if (invincible)
+        {
+            StartCoroutine(LoseInvincibility());
+        }
         
     }
 
@@ -59,5 +62,9 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-
+    IEnumerator LoseInvincibility()
+    {
+        yield return new WaitForSeconds(2f);
+        invincible = false;
+    }
 }
