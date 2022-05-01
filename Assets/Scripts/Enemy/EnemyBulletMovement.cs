@@ -51,20 +51,36 @@ public class EnemyBulletMovement : MonoBehaviour
         }
         //transform.Translate(Vector2.up * Time.deltaTime * moveSpeed);
     }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
+    //    {
+    //        collision.transform.GetComponent<PlayerController>().health--;
+    //        collision.transform.GetComponent<PlayerController>().invincible = true;
+    //        Destroy(gameObject);
+    //    }
+    //    else if (collision.transform.name.Contains("Player"))
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
         {
             collision.transform.GetComponent<PlayerController>().health--;
             collision.transform.GetComponent<PlayerController>().invincible = true;
-            
+            Destroy(gameObject);
+            StartCoroutine(LoseInvincibility());
         }
         else if (collision.transform.name.Contains("Player"))
         {
             Destroy(gameObject);
         }
-        
-        
-
+        IEnumerator LoseInvincibility()
+        {
+            yield return new WaitForSeconds(2);
+            collision.transform.GetComponent<PlayerController>().invincible = false;
+        }
     }
 }

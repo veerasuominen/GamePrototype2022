@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.9369692
       objectReference: {fileID: 0}
+    - target: {fileID: 7436931343284795005, guid: 068a0209df05eea4fbc29010e382f868,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7436931343284795006, guid: 068a0209df05eea4fbc29010e382f868,
         type: 3}
       propertyPath: m_Pivot.x
@@ -153,6 +158,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3f9553993c60499418e9954de2aaab1d,
         type: 3}
+    - target: {fileID: 7436931343284795007, guid: 068a0209df05eea4fbc29010e382f868,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 068a0209df05eea4fbc29010e382f868, type: 3}
 --- !u!1 &1932261514754512959 stripped

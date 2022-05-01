@@ -21,7 +21,7 @@ public class HardRoomDoor : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("HardRoom");
-            collision.transform.position = new Vector2(0, -5);
+            collision.transform.position = new Vector2(0, -3);
         }
 
     }

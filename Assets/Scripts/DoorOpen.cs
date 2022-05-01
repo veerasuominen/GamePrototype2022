@@ -20,8 +20,9 @@ public class DoorOpen : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Enemy")==null)
         {
             ChangeSprite();
-            gameObject.GetComponent<EnemyRoomDoor>().enabled = true;
             isOpen = true;
+            gameObject.GetComponent<EnemyRoomDoor>().enabled = true;
+            
         }
     }
 

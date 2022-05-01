@@ -8,10 +8,10 @@ public class NPCRoom : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player"&&gameObject.GetComponent<DoorOpen>().isOpen)
         {
             SceneManager.LoadScene("NPCRoom");
-            collision.transform.position = new Vector2(0, -5);
+            collision.transform.position = new Vector2(0, -3);
         }
 
     }

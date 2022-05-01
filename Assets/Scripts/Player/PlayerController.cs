@@ -67,4 +67,16 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         invincible = false;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.name.Contains("Bullet")&&!invincible)
+        {
+            Destroy(collision.gameObject);
+            health--;
+        }
+        else if (collision.transform.name.Contains("Bullet"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }

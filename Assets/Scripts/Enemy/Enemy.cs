@@ -36,17 +36,27 @@ public class Enemy : MonoBehaviour
     //        Destroy(player.gameObject);
     //    }
     //}
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //     if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
+    //    {
+    //        collision.transform.GetComponent<PlayerController>().health--;
+    //        collision.transform.GetComponent<PlayerController>().invincible = true;
+    //    }
+        
+
+    //}
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.name.Contains("Pinecone"))
         {
             Destroy(collision.gameObject);
             health--;
         }
-        else if (collision.transform.name.Contains("Player")&& collision.transform.GetComponent<PlayerController>().invincible ==false)
+        else if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
         {
             collision.transform.GetComponent<PlayerController>().health--;
-            collision.transform.GetComponent<PlayerController>().invincible=true;
+            collision.transform.GetComponent<PlayerController>().invincible = true;
             StartCoroutine(LoseInvincibility());
         }
         IEnumerator LoseInvincibility()
@@ -54,7 +64,6 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(2);
             collision.transform.GetComponent<PlayerController>().invincible = false;
         }
-        
     }
-    
+
 }
