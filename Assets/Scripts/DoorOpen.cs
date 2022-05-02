@@ -8,6 +8,8 @@ public class DoorOpen : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     public bool isOpen=false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,11 @@ public class DoorOpen : MonoBehaviour
             isOpen = true;
             gameObject.GetComponent<EnemyRoomDoor>().enabled = true;
             
+        }
+
+        if (isOpen)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Bush"));
         }
     }
 
