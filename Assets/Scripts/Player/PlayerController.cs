@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 speed = new Vector2(5, 5);
     public int health = 6;
     public bool invincible;
+    public int coins;
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer Player;
 
@@ -37,10 +38,6 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
-        if (invincible)
-        {
-            StartCoroutine(LoseInvincibility());
-        }
         
     }
 
@@ -61,11 +58,6 @@ public class PlayerController : MonoBehaviour
         {
 
         }
-    }
-    IEnumerator LoseInvincibility()
-    {
-        yield return new WaitForSeconds(2f);
-        invincible = false;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Bush
+  - Text
+  - Crown
   layers:
   - Default
   - TransparentFX

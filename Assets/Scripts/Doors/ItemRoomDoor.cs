@@ -10,7 +10,7 @@ public class ItemRoomDoor : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("EasyRoomCleared");
-            collision.transform.position = new Vector2(-6, 0);
+            collision.transform.position = new Vector2(-7, 0);
         }
 
     }

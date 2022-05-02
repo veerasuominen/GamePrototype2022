@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class HardEnemy : MonoBehaviour
 {
     public int health = 3;
+    private Vector3 direction = new Vector3(0, -1, 0);
+    [SerializeField] private int speed = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,38 +16,22 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.Translate(direction * Time.deltaTime * speed);
+
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-        //if (GameObject.Find("Player") == null)
-        //{
-        //    StartCoroutine(Dead());
-        //}
-        IEnumerator Dead()
+        if (transform.position.y>=3)
         {
-            yield return new WaitForSeconds(1.5f);
-            SceneManager.LoadScene(10);
+            direction = -direction;
         }
-    }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    health--;
-    //    if (other == player)
-    //    {
-    //        Destroy(player.gameObject);
-    //    }
-    //}
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //     if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
-    //    {
-    //        collision.transform.GetComponent<PlayerController>().health--;
-    //        collision.transform.GetComponent<PlayerController>().invincible = true;
-    //    }
-        
+        if (transform.position.y  <=-3)
+        {
+            direction = -direction;
+        }
 
-    //}
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.name.Contains("Pinecone"))
@@ -68,3 +54,4 @@ public class Enemy : MonoBehaviour
     }
 
 }
+

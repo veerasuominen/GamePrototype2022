@@ -128,7 +128,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -62.696457, y: 29.258232, z: -54.337135, w: 33.43823}
+  m_margin: {x: -20.661644, y: 29.258232, z: -17.247498, w: 90.30887}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9b337a360b84fa9428fe7dbe7774012f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -225,5 +225,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 7448240293424610176}
   lines:
-  - Press E to start dialogue
+  - Treasure
   textSpeed: 0.03
