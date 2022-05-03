@@ -24,7 +24,7 @@ public class DoorOpen : MonoBehaviour
             ChangeSprite();
             isOpen = true;
             gameObject.GetComponent<EnemyRoomDoor>().enabled = true;
-            
+
         }
 
         if (isOpen)

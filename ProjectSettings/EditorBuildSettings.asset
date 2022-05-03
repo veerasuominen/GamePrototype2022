@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EnemyRoom/HardRoom.unity
     guid: a2bb05ff3a09982459f742666cfb3ff9
+  - enabled: 1
+    path: Assets/Scenes/EnemyRoom/BossRoom.unity
+    guid: 5b70cbc96a9d0ab47b5794c29f004981
   m_configObjects: {}

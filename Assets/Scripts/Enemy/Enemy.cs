@@ -43,26 +43,27 @@ public class Enemy : MonoBehaviour
     //        collision.transform.GetComponent<PlayerController>().health--;
     //        collision.transform.GetComponent<PlayerController>().invincible = true;
     //    }
-        
+
 
     //}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.name.Contains("Pinecone"))
-        {
-            Destroy(collision.gameObject);
-            health--;
-        }
-        else if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
+        if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
         {
             collision.transform.GetComponent<PlayerController>().invincible = true;
             collision.transform.GetComponent<PlayerController>().health--;
-
             StartCoroutine(LoseInvincibility());
         }
+        if (collision.transform.parent.name.Contains("Pinecone"))
+        {
+            Destroy(collision.transform.parent.gameObject);
+            health -= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().damage;
+        }
+        
+
         IEnumerator LoseInvincibility()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1.5f);
             collision.transform.GetComponent<PlayerController>().invincible = false;
         }
     }

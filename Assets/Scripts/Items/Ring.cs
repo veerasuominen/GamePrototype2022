@@ -18,6 +18,7 @@ public class Ring : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && IsActiveNow && !pickedup && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().coins >= 3)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().coins -= 3;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().damage += 1;
             Debug.Log(gameObject.name);
             pickedup = true;
             Destroy(gameObject);

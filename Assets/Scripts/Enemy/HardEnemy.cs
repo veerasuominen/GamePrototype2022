@@ -34,10 +34,10 @@ public class HardEnemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.name.Contains("Pinecone"))
+        if (collision.transform.parent.name.Contains("Pinecone"))
         {
-            Destroy(collision.gameObject);
-            health--;
+            Destroy(collision.transform.parent.gameObject);
+            health -= GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().damage;
         }
         else if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
         {
@@ -48,7 +48,7 @@ public class HardEnemy : MonoBehaviour
         }
         IEnumerator LoseInvincibility()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1.5F);
             collision.transform.GetComponent<PlayerController>().invincible = false;
         }
     }

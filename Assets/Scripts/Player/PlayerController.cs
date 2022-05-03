@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public int health = 6;
     public bool invincible;
     public int coins;
+    public int damage = 1;
     // variable to hold a reference to our SpriteRenderer component
     private SpriteRenderer Player;
 

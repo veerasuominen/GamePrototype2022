@@ -69,9 +69,8 @@ public class EnemyBulletMovement : MonoBehaviour
         if (collision.transform.name.Contains("Player") && collision.transform.GetComponent<PlayerController>().invincible == false)
         {
             collision.transform.GetComponent<PlayerController>().health--;
-            collision.transform.GetComponent<PlayerController>().invincible = true;
             Destroy(gameObject);
-            StartCoroutine(LoseInvincibility());
+            
         }
         else if (collision.transform.name.Contains("Player"))
         {
@@ -79,7 +78,7 @@ public class EnemyBulletMovement : MonoBehaviour
         }
         IEnumerator LoseInvincibility()
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1.5f);
             collision.transform.GetComponent<PlayerController>().invincible = false;
         }
     }
