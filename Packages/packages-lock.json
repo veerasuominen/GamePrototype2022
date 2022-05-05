@@ -154,13 +154,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.netcode.gameobjects": {
-      "version": "file:D:/jamk/com.unity.netcode.gameobjects/com.unity.netcode.gameobjects",
+      "version": "1.0.0-pre.8",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
         "com.unity.nuget.mono-cecil": "1.10.1",
         "com.unity.transport": "1.0.0"
-      }
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.10.1",

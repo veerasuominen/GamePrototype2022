@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 21af4fa32d85a4c4cbd9e642785a1a2b
   - enabled: 1
-    path: Assets/Scenes/StartMultiplayer.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/StartMultiPlayer2.unity
+    guid: 6f35974fc5723c2469f86d2fd91e1ff2
   - enabled: 1
     path: Assets/Scenes/NPCRoom.unity
     guid: be054a1ef6449e941a78b8793744fc38
@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EnemyRoom/BossRoom.unity
     guid: 5b70cbc96a9d0ab47b5794c29f004981
+  - enabled: 0
+    path: Assets/Scenes/StartMultiplayer.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

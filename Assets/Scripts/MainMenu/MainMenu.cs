@@ -39,6 +39,6 @@ public class MainMenu : MonoBehaviour
     IEnumerator Startgame()
     {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("StartMultiPlayer");
+        SceneManager.LoadScene("StartMultiPlayer2");
     }
 }
