@@ -253,6 +253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bushes Top
       objectReference: {fileID: 0}
+    - target: {fileID: 9110150018774539084, guid: 8287e8275e0a92b44af3c2390e598ae2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9110150018774539087, guid: 8287e8275e0a92b44af3c2390e598ae2,
         type: 3}
       propertyPath: m_RootOrder
@@ -369,6 +374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bushes Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989173677812928170, guid: 1b5860092c7e23847a957f60a59ebc04,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2989173677812928171, guid: 1b5860092c7e23847a957f60a59ebc04,
         type: 3}
