@@ -17,7 +17,7 @@ public class DeactivateDialogue : MonoBehaviour
     }
     IEnumerator Close() 
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(3.2f);
         gameObject.SetActive(false);
     }
 }

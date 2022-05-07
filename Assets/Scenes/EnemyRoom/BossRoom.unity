@@ -827,6 +827,109 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
+--- !u!1001 &783484627
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.997848
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0394075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.1532
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9731271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.23026851
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -26.626
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199416, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715246947935199422, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: m_Name
+      value: PF Props Wooden Gate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767464072081048861, guid: 95765ff878753024fae9ad05dfe00c98,
+        type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 1659175016
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6767464072081048860, guid: 95765ff878753024fae9ad05dfe00c98, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 95765ff878753024fae9ad05dfe00c98, type: 3}
+--- !u!1 &783484628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4715246947935199422, guid: 95765ff878753024fae9ad05dfe00c98,
+    type: 3}
+  m_PrefabInstance: {fileID: 783484627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &783484629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783484628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1eb73496ef104469de65cb441adf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &801937459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1068,6 +1171,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7127211970536603982, guid: 8287e8275e0a92b44af3c2390e598ae2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127211971235908592, guid: 8287e8275e0a92b44af3c2390e598ae2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127211971425557344, guid: 8287e8275e0a92b44af3c2390e598ae2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9110150018774539084, guid: 8287e8275e0a92b44af3c2390e598ae2,
         type: 3}
       propertyPath: m_Name
@@ -1423,6 +1541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bushes Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989173677812928170, guid: 1b5860092c7e23847a957f60a59ebc04,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2989173677812928171, guid: 1b5860092c7e23847a957f60a59ebc04,
         type: 3}

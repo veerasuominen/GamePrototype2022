@@ -23,8 +23,7 @@ public class DoorOpen : MonoBehaviour
         {
             ChangeSprite();
             isOpen = true;
-            gameObject.GetComponent<EnemyRoomDoor>().enabled = true;
-
+            Destroy(GameObject.FindGameObjectWithTag("Bush"));
         }
 
         if (isOpen)

@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 4715246947935199417}
   - component: {fileID: 6767464072081048862}
   - component: {fileID: 6767464072081048850}
-  - component: {fileID: 6767464072081048851}
   - component: {fileID: 6767464072081048860}
   - component: {fileID: 6767464072081048861}
+  - component: {fileID: 6767464072081048851}
   m_Layer: 20
   m_Name: PF Props Wooden Gate
   m_TagString: Untagged
@@ -244,20 +244,6 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
---- !u!114 &6767464072081048851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4715246947935199422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db93903d0a1648499e1df4ed6d87a06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 4715246947935199423}
-  newSprite: {fileID: 21300160, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
 --- !u!114 &6767464072081048860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,3 +272,18 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &6767464072081048851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715246947935199422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db93903d0a1648499e1df4ed6d87a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4715246947935199423}
+  newSprite: {fileID: 21300160, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
+  isOpen: 0
