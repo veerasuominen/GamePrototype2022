@@ -326,9 +326,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 346001580, guid: 029e8819100ef0a4d9cfac5c5d055f22, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 883197303459925654, guid: 029e8819100ef0a4d9cfac5c5d055f22,
         type: 3}
       propertyPath: m_Name
+      value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 883197303459925654, guid: 029e8819100ef0a4d9cfac5c5d055f22,
+        type: 3}
+      propertyPath: m_TagString
       value: Map
       objectReference: {fileID: 0}
     - target: {fileID: 927812775951318140, guid: 029e8819100ef0a4d9cfac5c5d055f22,
@@ -1105,6 +1114,24 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!1 &754015682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 883197303459925654, guid: 029e8819100ef0a4d9cfac5c5d055f22,
+    type: 3}
+  m_PrefabInstance: {fileID: 262465596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &754015683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754015682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1748341c3aef72e4f8eb28497de53301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &861853886
 GameObject:
   m_ObjectHideFlags: 0
