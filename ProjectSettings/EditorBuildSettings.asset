@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DialogueScene.unity
     guid: 3dfcbef638692c749ad43ccf4019d95d
+  - enabled: 1
+    path: Assets/Scenes/TheEnd.unity
+    guid: 8c169a2bb57f3c8438054594bdc014b4
   m_configObjects: {}

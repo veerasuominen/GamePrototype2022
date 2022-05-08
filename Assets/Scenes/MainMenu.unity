@@ -1570,7 +1570,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1806614802}
         m_TargetAssemblyTypeName: NetworkButtonController, Assembly-CSharp
         m_MethodName: StartHost
@@ -1582,7 +1582,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
 --- !u!114 &2057093064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,7 +1730,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
 --- !u!114 &2099731518
 MonoBehaviour:
   m_ObjectHideFlags: 0
