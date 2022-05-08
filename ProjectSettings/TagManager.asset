@@ -9,6 +9,7 @@ TagManager:
   - Text
   - Crown
   - Pinecone
+  - Map
   layers:
   - Default
   - TransparentFX

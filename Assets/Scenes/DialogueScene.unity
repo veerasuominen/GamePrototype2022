@@ -361,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsActiveNow: 0
   pickedup: 0
+  visible: 0
 --- !u!61 &561925638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -977,7 +978,7 @@ PrefabInstance:
     - target: {fileID: 4094011683184477040, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4094011683184477041, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
@@ -987,7 +988,7 @@ PrefabInstance:
     - target: {fileID: 4094011683184477043, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4094011683184477044, guid: d536fa71dd00cf349a228e41212ace48,
         type: 3}
@@ -1254,9 +1255,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4094011683184477043, guid: d536fa71dd00cf349a228e41212ace48, type: 3}
-    - {fileID: 4094011683184477040, guid: d536fa71dd00cf349a228e41212ace48, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d536fa71dd00cf349a228e41212ace48, type: 3}
 --- !u!114 &1197251333 stripped
 MonoBehaviour:
@@ -1693,7 +1692,7 @@ PrefabInstance:
     - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}
       propertyPath: CallSE.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8206358605457009699, guid: b1e781a67c6f97f4d9cfb50a61f30655,
         type: 3}

@@ -20,11 +20,12 @@ public class PauseTimeDialogue : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>().enabled = false;
         }
-        else
+        else 
         {
             Scroll.gameObject.SetActive(true);
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
             GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>().enabled = true;
+            this.enabled = false;
         }
     }
 }

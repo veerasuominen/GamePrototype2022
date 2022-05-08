@@ -6,10 +6,11 @@ public class Scroll : MonoBehaviour
 {
     public bool IsActiveNow = false;
     public bool pickedup = false;
+    public bool visible = false;
     // Use this for initialization
     void Start()
     {
-
+        visible = true;
     }
 
     // Update is called once per frame
