@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class FriendlyNPCRoom : MonoBehaviour
+public class FriendlyNPCRoom : NetworkBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,16 @@ public class FriendlyNPCRoom : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("FriendlyNPC");
-            collision.transform.position = new Vector2(0, -3);
+            if (IsServer)
+            {
+                NetworkManager.Singleton.SceneManager.LoadScene("FriendlyNPC", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                collision.transform.position = new Vector2(-0.2f, -3f);
+            }
+            else
+            {
+                SceneManager.LoadScene("FriendlyNPC");
+                collision.transform.position = new Vector2(-0.2f, -3f);
+            }
         }
 
     }

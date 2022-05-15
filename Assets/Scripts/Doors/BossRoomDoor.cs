@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class BossRoomDoor : MonoBehaviour
+public class BossRoomDoor : NetworkBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,17 @@ public class BossRoomDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("BossRoom");
-            collision.transform.position = new Vector2(-0.2f, -3f);
+            if (IsServer)
+            {
+                NetworkManager.Singleton.SceneManager.LoadScene("BossRoom", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                collision.transform.position = new Vector2(-0.2f, -3f);
+            }
+            else
+            {
+                SceneManager.LoadScene("BossRoom");
+                collision.transform.position = new Vector2(-0.2f, -3f);
+            }
+           
         }
     }
 }

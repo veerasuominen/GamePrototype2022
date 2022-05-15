@@ -23,58 +23,118 @@ public class Shooting : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow)&&IsOwner)
+        if (IsOwner)
         {
-            int bully = Random.Range(1, 3);
-            if (bully==1)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posUp);
-            }
-            else
-            {
-                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posUp);
-            }
-            
-        }
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posUp);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posUp);
+                }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && IsOwner)
+            }
+
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posDown);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posDown);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posRight);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posRight);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posLeft);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posLeft);
+                }
+            }
+        }
+        else
         {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posUp);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posUp);
+                }
 
-            int bully = Random.Range(1, 3);
-            if (bully == 1)
-            {
-                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posDown);
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posDown);
+
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posDown);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posDown);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posRight);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posRight);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                int bully = Random.Range(1, 3);
+                if (bully == 1)
+                {
+                    Instantiate(Bullet, transform.position, Bullet.transform.rotation = posLeft);
+                }
+                else
+                {
+                    Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posLeft);
+                }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow) && IsOwner)
-        {
-            int bully = Random.Range(1, 3);
-            if (bully == 1)
-            {
-                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posRight);
-            }
-            else
-            {
-                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posRight);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && IsOwner)
-        {
-            int bully = Random.Range(1, 3);
-            if (bully == 1)
-            {
-                Instantiate(Bullet, transform.position, Bullet.transform.rotation = posLeft);
-            }
-            else
-            {
-                Instantiate(Bullet2, transform.position, Bullet2.transform.rotation = posLeft);
-            }
-        }
+        
     }
 }

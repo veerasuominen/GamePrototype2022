@@ -24,13 +24,13 @@ public class EnemyRoomDoor : NetworkBehaviour
     {
         int index = Random.Range(7, 10);
         string sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(index));
-
-
-        //if (IsServer)
-        //{
-        //    NetworkManager.Singleton.SceneManager.LoadScene(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
-        //}
-
-        //SceneManager.LoadScene(index);
+        if (IsServer)
+        {
+            NetworkManager.Singleton.SceneManager.LoadScene(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
+        }
+        else
+        {
+            SceneManager.LoadScene(index);
+        }
     }
 }

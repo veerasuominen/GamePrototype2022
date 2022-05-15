@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class HardRoomDoor : MonoBehaviour
+public class HardRoomDoor : NetworkBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,17 @@ public class HardRoomDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("HardRoom");
-            collision.transform.position = new Vector2(0, -3);
+            if (IsServer)
+            {
+                NetworkManager.Singleton.SceneManager.LoadScene("HardRoom", UnityEngine.SceneManagement.LoadSceneMode.Single);
+                collision.transform.position = new Vector2(-0.2f, -3f);
+            }
+            else
+            {
+                SceneManager.LoadScene("HardRoom");
+                collision.transform.position = new Vector2(-0.2f, -3f);
+            }
+
         }
 
     }

@@ -44,18 +44,37 @@ public class PlayerController : NetworkBehaviour
 
     void CharacterRotation()
     {
-        if (Input.GetKey(KeyCode.A)&&IsOwner)
+        if (IsOwner)
         {
-            if (Player != null)
+            if (Input.GetKey(KeyCode.A) && IsOwner)
             {
-                // flip the sprite
-                Player.flipX = true;
+                if (Player != null)
+                {
+                    // flip the sprite
+                    Player.flipX = true;
+                }
+            }
+            if (Input.GetKey(KeyCode.D) && IsOwner)
+            {
+                Player.flipX = false;
             }
         }
-        if (Input.GetKey(KeyCode.D)&&IsOwner)
+        else
         {
-            Player.flipX = false;
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (Player != null)
+                {
+                    // flip the sprite
+                    Player.flipX = true;
+                }
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                Player.flipX = false;
+            }
         }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

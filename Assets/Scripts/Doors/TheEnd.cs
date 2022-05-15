@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class TheEnd : MonoBehaviour
+public class TheEnd : NetworkBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,14 @@ public class TheEnd : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("TheEnd");
-            
+            if (IsServer)
+            {
+                NetworkManager.Singleton.SceneManager.LoadScene("TheEnd", UnityEngine.SceneManagement.LoadSceneMode.Single);
+            }
+            else
+            {
+                SceneManager.LoadScene("TheEnd");
+            }
         }
 
     }
