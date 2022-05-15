@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class Player2Controller : MonoBehaviour
+public class Player2Controller : NetworkBehaviour
 {
     private Vector2 speed = new Vector2(5, 5);
     private int health = 6;
@@ -43,7 +44,7 @@ public class Player2Controller : MonoBehaviour
 
     void CharacterRotation()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A)&&IsClient)
         {
             if (Player != null)
             {
@@ -51,7 +52,7 @@ public class Player2Controller : MonoBehaviour
                 Player.flipX = false;
             }
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && IsClient)
         {
             Player.flipX = true;
         }

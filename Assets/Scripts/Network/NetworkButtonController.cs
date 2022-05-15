@@ -15,7 +15,7 @@ public class NetworkButtonController : MonoBehaviour
     public void StartHost()
     {
         NetworkManager.Singleton.StartHost();
-        //this.gameObject.GetComponent<NetworkManager>().NetworkConfig.PlayerPrefab = player2;
+        this.gameObject.GetComponent<NetworkManager>().NetworkConfig.PlayerPrefab = player2;
     }
 
     public void StartClient()

@@ -5,16 +5,15 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class StartRoomDoor : MonoBehaviour
+public class StartRoomDoor : NetworkBehaviour
 {
 
-    
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -29,7 +28,13 @@ public class StartRoomDoor : MonoBehaviour
     void LoadRandomEasyRoom()
     {
         int index = Random.Range(4,7);
-        SceneManager.LoadScene(index);
+        string sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(index));
+        //if (IsServer)
+        //{
+        //    NetworkManager.Singleton.SceneManager.LoadScene(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
+        //}
+        
+        //SceneManager.LoadScene(index);
     }
     public static T DeserializeData<T>(string path)
     {

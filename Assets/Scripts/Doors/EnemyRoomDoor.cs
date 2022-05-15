@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class EnemyRoomDoor : MonoBehaviour
+public class EnemyRoomDoor : NetworkBehaviour
 {
     private void Start()
     {
@@ -22,6 +23,14 @@ public class EnemyRoomDoor : MonoBehaviour
     void LoadRandomEasyRoom()
     {
         int index = Random.Range(7, 10);
-        SceneManager.LoadScene(index);
+        string sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(index));
+
+
+        //if (IsServer)
+        //{
+        //    NetworkManager.Singleton.SceneManager.LoadScene(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
+        //}
+
+        //SceneManager.LoadScene(index);
     }
 }

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class Shooting : MonoBehaviour
+public class Shooting : NetworkBehaviour
 {
     public float BulletSpeed = 20;
     public GameObject Bullet;
@@ -22,7 +23,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow)&&IsOwner)
         {
             int bully = Random.Range(1, 3);
             if (bully==1)
@@ -36,7 +37,7 @@ public class Shooting : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && IsOwner)
         {
 
             int bully = Random.Range(1, 3);
@@ -50,7 +51,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && IsOwner)
         {
             int bully = Random.Range(1, 3);
             if (bully == 1)
@@ -63,7 +64,7 @@ public class Shooting : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && IsOwner)
         {
             int bully = Random.Range(1, 3);
             if (bully == 1)
