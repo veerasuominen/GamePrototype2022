@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
     public Vector2 speed = new Vector2(5, 5);
     public int health = 6;
@@ -23,7 +24,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
             float inputY = Input.GetAxis("Vertical");
             float inputX = Input.GetAxis("Horizontal");
 
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     void CharacterRotation()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A)&&IsOwner)
         {
             if (Player != null)
             {
@@ -52,12 +52,9 @@ public class PlayerController : MonoBehaviour
                 Player.flipX = true;
             }
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D)&&IsOwner)
         {
             Player.flipX = false;
-        }
-        {
-
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
